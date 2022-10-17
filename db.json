@@ -1,0 +1,74 @@
+{
+    "personas": [
+        {
+            "id": 1,
+            "ci":"56789",
+            "sis": "200111",
+            "complemento": "aaa",
+            "nombre1": "Ricado",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Perez",
+            "apellido2": "diaz"
+        },
+        {
+            "id": 2,
+            "ci":"58889",
+            "sis": "200131",
+            "complemento": "aba",
+            "nombre1": "Juan",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Escobar",
+            "apellido2": "Villa"
+        },
+        {
+            "id": 3,
+            "ci":"57889",
+            "sis": "900111",
+            "complemento": "assx",
+            "nombre1": "Estaban",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Fuentes",
+            "apellido2": "diaz"
+        },
+        {
+            "id": 4,
+            "ci":"56789",
+            "sis": "200111",
+            "complemento": "aaa",
+            "nombre1": "Ricado",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Perez",
+            "apellido2": "diaz"
+        },
+        {
+            "id": 5,
+            "ci":"56789",
+            "sis": "200111",
+            "complemento": "aaa",
+            "nombre1": "Ricado",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Perez",
+            "apellido2": "diaz"
+        },
+        {
+            "id": 6,
+            "ci":"56789",
+            "sis": "200111",
+            "complemento": "aaa",
+            "nombre1": "Ricado",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Perez",
+            "apellido2": "diaz"
+        },
+        {
+            "id": 7,
+            "ci":"56789",
+            "sis": "200111",
+            "complemento": "aaa",
+            "nombre1": "Ricado",
+            "nombre2": "M. Night Shyamalan",
+            "apellido1": "Perez",
+            "apellido2": "diaz"
+        }
+    ]
+}  
