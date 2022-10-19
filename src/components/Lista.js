@@ -10,8 +10,22 @@ class Listar extends React.Component {
     };
   }
 
+  borrarRegistros=(id) => {
+    fetch("http://localhost/empleados/?borrar="+id)
+    .then(respuesta=>respuesta.json())
+    .then((datosrespuesta)=>{
+      
+      console.log(datosrespuesta);
+      this.cargarDatos();
+    
+    })
+    .catch(console.log)
+    console.log(id);
+  }
+
+
   cargarDatos() {
-    fetch("http://localhost:3004/personas")
+    fetch("http://localhost/empleados/")
     .then(respuesta=>respuesta.json())
     .then((datosrespuesta)=>{
       
@@ -41,33 +55,27 @@ class Listar extends React.Component {
               <thead>
                 <tr>
                         <th>ID</th>
-                        <th>CI</th>
-                        <th>SIS</th>
-                        <th>COMPLEMENTO</th>
-                        <th>NOMBRE1</th>
-                        <th>NOMBRE2</th>
-                        <th>APELLIDO1</th>
-                        <th>APELLIDO2</th>
-                        
+                        <th>NOMBRE</th>
+                        <th>CORREO</th>
+
                         <th>ACCIONES</th>
                 </tr>
               </thead>
                 <tbody>
                   {empleados.map(
-                    (empleado) =>
-                    <tr key={empleado.id}>
+                    (empleado, index) =>
+                    <tr key={index}>
                   <td>{empleado.id}</td>
-                          <td>{empleado.ci}</td>
-                          <td>{empleado.sis}</td>
-                          <td>{empleado.complemento}</td>
-                          <td>{empleado.nombre1}</td>
-                          <td>{empleado.nombre2}</td>
-                          <td>{empleado.apellido1}</td>
-                          <td>{empleado.apellido2}</td>
+                          <td>{empleado.nombre}</td>
+                          <td>{empleado.correo}</td>
                     <td>
                       <div className="btn-group" role="group" aria-label="">
-                        <Link className="btn btn-warning" to={'/editar'}>Editar</Link>
-                        <button type="button" className="btn btn-danger">Borrar</button>
+                        <Link className="btn btn-warning" to={"/editar/"+empleado.id}>
+                          
+                          Editar</Link>
+                        <button type="button" className="btn btn-danger"
+                        onClick={() => this.borrarRegistros(empleado.id)}
+                        >Borrar</button>
                       </div>
                     </td>
                   </tr>

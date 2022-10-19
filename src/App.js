@@ -20,9 +20,9 @@ function App() {
     <div className='container'>
       <br />
       <Routes>
-          <Route  exact path='/' element={<Listar />} />
-          <Route  path='/crear' element={<Crear />} />
-          <Route  path='/editar' element={<Editar />} />
+          <Route  exact path="/" element={<Listar />} />
+          <Route  path="/crear" element={<Crear />} />
+          <Route  path="/editar/:id" element={<Editar />} />
       </Routes>
     </div>
       </Router>

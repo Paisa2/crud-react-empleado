@@ -20,7 +20,24 @@ class Crear extends React.Component {
     const {nombre,correo} = this.state;
     console.log(nombre);
     console.log(correo);
+
+    var datosEnviar = {nombre:nombre,correo:correo};
+
+    fetch("http://localhost/empleados/?insertar=1" ,{
+      method: 'POST',
+      body:JSON.stringify(datosEnviar)
+
+    })
+    .then(respuesta=>respuesta.json())
+    .then((datosrespuesta)=>{
+      
+      console.log(datosrespuesta);
+      this.props.history.push("/");
+    
+    })
+    .catch(console.log)
   }
+
 
   render() { 
     const {nombre,correo} = this.state;
